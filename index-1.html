@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- =====================================================
+       EDIT: Ganti judul dan deskripsi untuk SEO
+  ====================================================== -->
+  <title>Desa Wisata Cidadap — Situ Cibeureum, Campaka, Cianjur</title>
+  <meta name="description" content="Desa Wisata Cidadap, Kecamatan Campaka, Kabupaten Cianjur. Wisata pancing Situ Cibeureum, homestay, outbound tradisional, tour petani aren, workshop peyem." />
+  <meta name="keywords" content="desa wisata cidadap, situ cibeureum, wisata cianjur, wisata pancing cianjur, outbound cianjur, pokdarwis cidadap" />
+
+  <!-- Open Graph (untuk preview di WhatsApp / media sosial) -->
+  <meta property="og:title" content="Desa Wisata Cidadap — Situ Cibeureum" />
+  <meta property="og:description" content="Wisata alam, budaya & kuliner autentik di Kampaka, Cianjur, Jawa Barat." />
+  <meta property="og:image" content="images/hero-situ.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =====================================================
+       WARNA — edit nilai di sini untuk ganti tema warna
+       ===================================================== */
+    :root {
+      --hijau-tua:   #1a3a2a;   /* Warna utama hijau gelap */
+      --hijau-muda:  #2e6645;   /* Hijau tombol & aksen */
+      --emas:        #c8952a;   /* Warna emas / kuning */
+      --emas-muda:   #f0c96e;   /* Emas muda highlight */
+      --krem:        #f5f0e6;   /* Background krem */
+      --putih:       #ffffff;
+      --teks-gelap:  #1c1c1c;
+      --teks-abu:    #555;
+      --bayangan:    0 4px 30px rgba(0,0,0,0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--krem);
+      color: var(--teks-gelap);
+      overflow-x: hidden;
+    }
+
+    /* ---- UTILS ---- */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    .section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--emas);
+      display: block;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--hijau-tua);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: var(--teks-abu);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--emas);
+      color: var(--hijau-tua);
+    }
+    .btn-primary:hover { background: var(--emas-muda); transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--putih);
+      color: var(--putih);
+    }
+    .btn-outline:hover { background: var(--putih); color: var(--hijau-tua); }
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-wa:hover { background: #1da851; transform: translateY(-2px); }
+
+    /* ====================================================
+       NAVBAR
+    ==================================================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26, 58, 42, 0.96);
+      backdrop-filter: blur(8px);
+      padding: 14px 0;
+      transition: all 0.3s;
+    }
+    nav .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    /* EDIT: ganti src logo sesuai file Anda */
+    .nav-brand img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-brand-text span:first-child {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--putih);
+      font-weight: 700;
+    }
+    .nav-brand-text span:last-child {
+      font-size: 0.65rem;
+      color: var(--emas-muda);
+      letter-spacing: 0.08em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.87rem;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--emas-muda); }
+    .nav-cta {
+      background: var(--emas);
+      color: var(--hijau-tua) !important;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-weight: 500 !important;
+    }
+    /* Mobile hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: var(--putih);
+      display: block;
+      transition: all 0.3s;
+    }
+    @media(max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--hijau-tua);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+      }
+      .nav-links.open { display: flex; }
+    }
+
+    /* ====================================================
+       HERO
+    ==================================================== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    /* EDIT: Ganti URL gambar hero utama di sini */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('../galeri-1.jpg') center/cover no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(26,58,42,0.82) 0%,
+        rgba(26,58,42,0.55) 60%,
+        rgba(0,0,0,0.2) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 0 80px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,149,42,0.2);
+      border: 1px solid var(--emas);
+      color: var(--emas-muda);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 2px;
+      margin-bottom: 20px;
+    }
+    /* EDIT: Ganti teks judul hero */
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      color: var(--putih);
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 700px;
+    }
+    .hero-title em { color: var(--emas-muda); font-style: italic; }
+    /* EDIT: Ganti tagline */
+    .hero-sub {
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 520px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-stats {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      gap: 40px;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      flex-wrap: wrap;
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--emas-muda);
+    }
+    .hero-stat span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.05em;
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .scroll-hint span { font-size: 0.65rem; color: rgba(255,255,255,0.5); letter-spacing: 0.12em; }
+    .scroll-hint::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    /* ====================================================
+       TENTANG KAMI
+    ==================================================== */
+    #tentang { background: var(--putih); }
+    .tentang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .tentang-img {
+      position: relative;
+    }
+    /* EDIT: Ganti gambar foto desa */
+    .tentang-img img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+    }
+    .tentang-img::before {
+      content: '';
+      position: absolute;
+      top: -16px; left: -16px;
+      width: 60%;
+      height: 60%;
+      border: 3px solid var(--emas);
+      border-radius: 4px;
+      z-index: 0;
+    }
+    .tentang-img img { position: relative; z-index: 1; }
+    .badge-lokasi {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      z-index: 2;
+      background: var(--hijau-tua);
+      color: var(--putih);
+      padding: 16px 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .badge-lokasi strong {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--emas-muda);
+    }
+    .badge-lokasi span { font-size: 0.72rem; opacity: 0.8; }
+    .tentang-visi {
+      margin-top: 28px;
+      padding: 20px 24px;
+      border-left: 3px solid var(--emas);
+      background: var(--krem);
+      border-radius: 0 4px 4px 0;
+    }
+    .tentang-visi p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: var(--hijau-tua);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    @media(max-width:768px) {
+      .tentang-grid { grid-template-columns: 1fr; }
+      .badge-lokasi { right: 10px; }
+    }
+
+    /* ====================================================
+       ZONA WISATA
+    ==================================================== */
+    #zona { background: var(--krem); }
+    .zona-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .zona-card {
+      background: var(--putih);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: var(--bayangan);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .zona-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+    /* EDIT: Ganti gambar setiap zona wisata */
+    .zona-img {
+      height: 200px;
+      background: var(--hijau-tua) center/cover no-repeat;
+      position: relative;
+    }
+    .zona-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,58,42,0.7) 0%, transparent 60%);
+    }
+    .zona-emoji {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      z-index: 1;
+      font-size: 1.8rem;
+    }
+    .zona-body { padding: 20px; }
+    .zona-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--hijau-tua);
+      margin-bottom: 8px;
+    }
+    .zona-body p {
+      font-size: 0.87rem;
+      color: var(--teks-abu);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(46,102,69,0.1);
+      color: var(--hijau-muda);
+      font-weight: 500;
+    }
+
+    /* ====================================================
+       PAKET & HARGA
+    ==================================================== */
+    #paket { background: var(--hijau-tua); }
+    #paket .section-title { color: var(--putih); }
+    #paket .section-subtitle { color: rgba(255,255,255,0.7); }
+    .paket-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .paket-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      padding: 32px 28px;
+      position: relative;
+      transition: background 0.3s;
+    }
+    .paket-card:hover { background: rgba(255,255,255,0.1); }
+    .paket-card.featured {
+      border-color: var(--emas);
+      background: rgba(200,149,42,0.08);
+    }
+    .paket-badge {
+      position: absolute;
+      top: -12px; right: 20px;
+      background: var(--emas);
+      color: var(--hijau-tua);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .paket-icon { font-size: 2rem; margin-bottom: 14px; }
+    .paket-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--putih);
+      margin-bottom: 6px;
+    }
+    .paket-desc {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .paket-harga {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--emas-muda);
+      margin-bottom: 4px;
+    }
+    .paket-harga span { font-size: 0.75rem; color: rgba(255,255,255,0.5); font-family: 'DM Sans', sans-serif; }
+    .paket-includes {
+      list-style: none;
+      margin: 20px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .paket-includes li {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.8);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .paket-includes li::before { content: '✓'; color: var(--emas); font-weight: 700; flex-shrink: 0; }
+    .paket-card .btn { width: 100%; text-align: center; }
+
+    /* ====================================================
+       ATRAKSI / AKTIVITAS
+    ==================================================== */
+    #aktivitas { background: var(--putih); }
+    .aktivitas-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+    .aktivitas-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .aktivitas-icon {
+      flex-shrink: 0;
+      width: 54px; height: 54px;
+      border-radius: 4px;
+      background: var(--krem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+    }
+    .aktivitas-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--hijau-tua);
+      margin-bottom: 6px;
+    }
+    .aktivitas-item p {
+      font-size: 0.83rem;
+      color: var(--teks-abu);
+      line-height: 1.7;
+    }
+
+    /* ====================================================
+       EVENT / FESTIVAL
+    ==================================================== */
+    #event { background: var(--krem); }
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .event-card {
+      background: var(--putih);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: var(--bayangan);
+      display: flex;
+      flex-direction: column;
+    }
+    /* EDIT: Ganti gambar event */
+    .event-img {
+      height: 180px;
+      background: var(--hijau-tua) center/cover no-repeat;
+    }
+    .event-body { padding: 22px; flex: 1; }
+    .event-tag {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--emas);
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .event-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--hijau-tua);
+      margin-bottom: 8px;
+    }
+    .event-body p {
+      font-size: 0.83rem;
+      color: var(--teks-abu);
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .event-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 0.78rem;
+      color: var(--teks-abu);
+    }
+    .event-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* ====================================================
+       GALERI
+    ==================================================== */
+    #galeri { background: var(--hijau-tua); }
+    #galeri .section-title { color: var(--putih); }
+    /* EDIT: Tambahkan foto ke folder images/ lalu tambahkan tag <img> di sini */
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 12px;
+      margin-top: 40px;
+    }
+    .galeri-item {
+      overflow: hidden;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.05);
+    }
+    .galeri-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    .galeri-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+      min-height: 180px;
+    }
+    .galeri-item:first-child img { min-height: 360px; }
+    .galeri-item:hover img { transform: scale(1.04); }
+    @media(max-width:600px) {
+      .galeri-grid { grid-template-columns: 1fr 1fr; }
+      .galeri-item:first-child { grid-column: span 2; grid-row: span 1; }
+    }
+
+    /* ====================================================
+       CARA PESAN
+    ==================================================== */
+    #pesan { background: var(--putih); }
+    .steps {
+      display: flex;
+      gap: 0;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+    .step {
+      flex: 1;
+      min-width: 200px;
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+    }
+    .step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: var(--emas);
+    }
+    .step-num {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--hijau-tua);
+      color: var(--emas-muda);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+    }
+    .step h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      color: var(--hijau-tua);
+      margin-bottom: 6px;
+    }
+    .step p { font-size: 0.8rem; color: var(--teks-abu); line-height: 1.6; }
+    @media(max-width:600px) {
+      .step:not(:last-child)::after { display: none; }
+    }
+
+    /* ====================================================
+       KONTAK
+    ==================================================== */
+    #kontak { background: var(--krem); }
+    .kontak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .kontak-info { display: flex; flex-direction: column; gap: 24px; }
+    .kontak-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .kontak-item .k-icon {
+      width: 42px; height: 42px;
+      background: var(--hijau-tua);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .kontak-item strong {
+      display: block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--hijau-tua);
+      margin-bottom: 4px;
+    }
+    .kontak-item p, .kontak-item a {
+      font-size: 0.9rem;
+      color: var(--teks-abu);
+      line-height: 1.6;
+      text-decoration: none;
+    }
+    .kontak-item a:hover { color: var(--hijau-muda); }
+    .kontak-map {
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: var(--bayangan);
+    }
+    /* EDIT: Ganti src iframe peta Google Maps Anda */
+    .kontak-map iframe {
+      width: 100%;
+      height: 380px;
+      border: none;
+      display: block;
+    }
+    @media(max-width:768px) {
+      .kontak-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ====================================================
+       CTA BANNER
+    ==================================================== */
+    #cta {
+      background: linear-gradient(135deg, var(--hijau-muda), var(--hijau-tua));
+      padding: 70px 0;
+      text-align: center;
+    }
+    #cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      color: var(--putih);
+      margin-bottom: 14px;
+    }
+    #cta p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 30px;
+    }
+    #cta .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ====================================================
+       FOOTER
+    ==================================================== */
+    footer {
+      background: #0e2318;
+      padding: 40px 0 24px;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand img { width: 50px; margin-bottom: 12px; }
+    .footer-brand p {
+      font-family: 'Lora', serif;
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.5);
+      margin-top: 10px;
+    }
+    .footer-brand strong {
+      display: block;
+      color: var(--putih);
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .footer-col h4 {
+      color: var(--emas-muda);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.83rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: var(--emas-muda); }
+    .footer-bottom {
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+    }
+    /* EDIT: Tambahkan link media sosial di sini */
+    .sosmed { display: flex; gap: 12px; margin-top: 14px; }
+    .sosmed a {
+      width: 34px; height: 34px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .sosmed a:hover {
+      border-color: var(--emas);
+      color: var(--emas);
+    }
+    @media(max-width:768px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+    }
+
+    /* ====================================================
+       WHATSAPP FLOATING BUTTON
+    ==================================================== */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      z-index: 999;
+      background: #25d366;
+      color: #fff;
+      width: 54px; height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.08); }
+
+    /* Animasi masuk */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s, transform 0.7s;
+    }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+  </style>
+</head>
+<body>
+
+<!-- ======================================================
+     NAVBAR
+     EDIT: Ganti nomor WhatsApp di href tombol "Hubungi Kami"
+====================================================== -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-brand">
+      <!-- EDIT: Pastikan file logo ada di folder images/logo.png -->
+      <img src="logo.png" alt="Logo POKDARWIS Cidadap" />
+      <div class="nav-brand-text">
+        <span>Desa Wisata Cidadap</span>
+        <span>Kec. Campaka · Kab. Cianjur</span>
+      </div>
+    </a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#zona">Zona Wisata</a></li>
+      <li><a href="#paket">Paket</a></li>
+      <li><a href="#aktivitas">Aktivitas</a></li>
+      <li><a href="#event">Event</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <!-- EDIT: Ganti 628xxxx dengan nomor WhatsApp aktif -->
+      <li><a href="https://wa.me/6287874010019" class="nav-cta" target="_blank">📲 Hubungi Kami</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ======================================================
+     HERO SECTION
+     EDIT: Gambar background ada di images/hero-situ.jpg
+====================================================== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <!-- EDIT: Ganti teks di bawah ini sesuai kebutuhan -->
+    <div class="hero-content">
+      <div class="hero-badge">✦ Desa Wisata Berbasis Kearifan Lokal ✦</div>
+      <h1 class="hero-title">
+        Rasakan Desa,<br>
+        <em>Nikmati Alam,</em><br>
+        Pulang Berkesan.
+      </h1>
+      <p class="hero-sub">
+        Desa Wisata Cidadap — surga tersembunyi di Kecamatan Campaka, Cianjur.
+        Pancing di Situ Cibeureum, jelajahi hamparan sawah, dan rasakan hangatnya budaya Sunda.
+      </p>
+      <div class="hero-actions">
+        <!-- EDIT: Ganti nomor WhatsApp -->
+        <a href="https://wa.me/6287874010019?text=Halo,%20saya%20ingin%20info%20paket%20wisata%20Desa%20Cidadap" class="btn btn-wa" target="_blank">
+          💬 Pesan via WhatsApp
+        </a>
+        <a href="#paket" class="btn btn-outline">Lihat Paket Wisata</a>
+      </div>
+      <div class="hero-stats">
+        <!-- EDIT: Update angka statistik sesuai data terkini -->
+        <div class="hero-stat">
+          <strong>4</strong>
+          <span>Zona Wisata</span>
+        </div>
+        <div class="hero-stat">
+          <strong>2026</strong>
+          <span>Resmi Beroperasi</span>
+        </div>
+        <div class="hero-stat">
+          <strong>±2 Ha</strong>
+          <span>Luas Situ Cibeureum</span>
+        </div>
+        <div class="hero-stat">
+          <strong>07.00–18.00</strong>
+          <span>Jam Buka (Sel–Ming)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>SCROLL</span></div>
+</section>
+
+<!-- ======================================================
+     TENTANG KAMI
+     EDIT: Ganti gambar di images/foto-desa.jpg
+====================================================== -->
+<section id="tentang" class="section">
+  <div class="container">
+    <div class="tentang-grid">
+      <div class="tentang-img fade-in">
+        <!-- EDIT: Ganti gambar foto desa / udara -->
+        <img src="galeri-2.jpg" alt="Panorama Desa Wisata Cidadap" />
+        <div class="badge-lokasi">
+          <strong>Cidadap</strong>
+          <span>Campaka · Cianjur · Jawa Barat</span>
+        </div>
+      </div>
+      <div class="fade-in">
+        <span class="section-label">Tentang Kami</span>
+        <!-- EDIT: Ganti teks deskripsi -->
+        <h2 class="section-title">POKDARWIS Situ Cibeureum</h2>
+        <p class="section-subtitle" style="margin-bottom:16px;">
+          Kelompok Sadar Wisata (POKDARWIS) Situ Cibeureum dibentuk pada 26 Februari 2026
+          berdasarkan SK Kepala Desa No. 141/6/II/2026. Kami mengelola Desa Wisata Cidadap
+          sebagai destinasi berbasis alam, budaya, dan kearifan lokal Sunda.
+        </p>
+        <p class="section-subtitle">
+          Terletak di kaki pegunungan Cianjur, Desa Cidadap menawarkan pengalaman autentik —
+          dari memancing di situ alami, menyaksikan petani aren bersadap nira, hingga menikmati
+          peyem hangat buatan warga. Semua dikelola langsung oleh masyarakat desa.
+        </p>
+        <div class="tentang-visi">
+          <!-- EDIT: Ganti teks visi jika berubah -->
+          <p>"Menjadikan Desa Wisata Cidadap sebagai destinasi wisata berbasis alam, budaya,
+          dan kearifan lokal yang berkelanjutan, berdaya saing, dan mampu meningkatkan
+          kesejahteraan masyarakat."</p>
+        </div>
+        <div style="margin-top:28px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a href="#zona" class="btn btn-primary">Jelajahi Zona Wisata</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     ZONA WISATA
+     EDIT: Tambahkan/ubah gambar di style background-image
+====================================================== -->
+<section id="zona" class="section">
+  <div class="container">
+    <span class="section-label">Zona Wisata</span>
+    <h2 class="section-title">4 Kawasan Wisata Unggulan</h2>
+    <p class="section-subtitle">
+      Setiap zona menawarkan pengalaman berbeda — dari danau alami hingga perbukitan hijau yang memukau.
+    </p>
+    <div class="zona-grid">
+
+      <!-- ZONA 1 — EDIT: Ganti gambar background di style -->
+      <div class="zona-card fade-in">
+        <div class="zona-img" style="background-image: url('../galeri-1.jpg');">
+          <span class="zona-emoji">🎣</span>
+        </div>
+        <div class="zona-body">
+          <h3>Situ Cibeureum</h3>
+          <!-- EDIT: Ubah deskripsi -->
+          <p>Embung alami seluas ±2 hektar, dilengkapi galadag bambu untuk area memancing.
+          Buka Selasa–Minggu, 07.00–18.00 WIB.</p>
+          <div class="tag-list">
+            <span class="tag">🎣 Pancing</span>
+            <span class="tag">📸 Spot Foto</span>
+            <span class="tag">🌿 Alam Terbuka</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZONA 2 — EDIT: Ganti gambar -->
+      <div class="zona-card fade-in">
+        <div class="zona-img" style="background-image: url('../galeri-3.jpg');">
+          <span class="zona-emoji">💦</span>
+        </div>
+        <div class="zona-body">
+          <h3>Curug Badak</h3>
+          <p>Air terjun alami dengan aktivitas tubing dan kano. Cocok untuk petualangan keluarga
+          maupun rombongan muda.</p>
+          <div class="tag-list">
+            <span class="tag">💦 Air Terjun</span>
+            <span class="tag">🚣 Tubing</span>
+            <span class="tag">🛶 Kano</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZONA 3 — EDIT: Ganti gambar -->
+      <div class="zona-card fade-in">
+        <div class="zona-img" style="background-image: url('../galeri-4.jpg');">
+          <span class="zona-emoji">🌾</span>
+        </div>
+        <div class="zona-body">
+          <h3>Situ Gelam</h3>
+          <p>Kawasan agrowisata dan peternakan terpadu. Pengunjung dapat berinteraksi langsung
+          dengan proses pertanian dan peternakan warga.</p>
+          <div class="tag-list">
+            <span class="tag">🌾 Agrowisata</span>
+            <span class="tag">🐄 Peternakan</span>
+            <span class="tag">📚 Edukasi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZONA 4 — EDIT: Ganti gambar -->
+      <div class="zona-card fade-in">
+        <div class="zona-img" style="background-image: url('../galeri-5.jpg');">
+          <span class="zona-emoji">🏕️</span>
+        </div>
+        <div class="zona-body">
+          <h3>Perbukitan & Persawahan</h3>
+          <p>Hamparan sawah dengan view pegunungan Cianjur. Ada dek pandang, area BBQ lesehan,
+          shooting area, RC offroad, dan Kampung Mekarsari Parabon.</p>
+          <div class="tag-list">
+            <span class="tag">🏹 Panahan</span>
+            <span class="tag">🎨 Melukis</span>
+            <span class="tag">🍳 Kuliner</span>
+            <span class="tag">🎯 Outbound</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PAKET & HARGA
+     EDIT: Ganti harga dan isi paket sesuai terbaru
+====================================================== -->
+<section id="paket" class="section">
+  <div class="container">
+    <span class="section-label" style="color:var(--emas-muda);">Paket & Harga</span>
+    <h2 class="section-title">Pilih Paket Sesuai Kebutuhan</h2>
+    <p class="section-subtitle">
+      Semua paket sudah termasuk akses kawasan dan pendampingan pemandu lokal.
+    </p>
+    <div class="paket-grid">
+
+      <!-- PAKET 1 — EDIT: Ubah nama, harga, isi -->
+      <div class="paket-card fade-in">
+        <div class="paket-icon">🎣</div>
+        <h3>Paket Keluarga & Santai</h3>
+        <p class="paket-desc">Nikmati seharian mancing di Situ Cibeureum dengan makan siang khas Sunda.</p>
+        <div class="paket-harga">Rp 125.000 <span>/ orang</span></div>
+        <ul class="paket-includes">
+          <li>Akses area pancing Situ Cibeureum</li>
+          <li>Makan siang di Bale Warga (kuliner khas)</li>
+          <li>Dari Situ ke Piring — pengalaman lengkap</li>
+          <li>Parkir gratis</li>
+        </ul>
+        <a href="https://wa.me/6287874010019?text=Halo,%20saya%20ingin%20pesan%20Paket%20Keluarga%20Desa%20Cidadap" class="btn btn-primary" target="_blank">Pesan Sekarang</a>
+      </div>
+
+      <!-- PAKET 2 — EDIT: Ubah nama, harga, isi -->
+      <div class="paket-card featured fade-in">
+        <div class="paket-badge">POPULER</div>
+        <div class="paket-icon">🏡</div>
+        <h3>Paket Akomodasi</h3>
+        <p class="paket-desc">Menginap di rumah warga, rasakan kehidupan desa yang sesungguhnya.</p>
+        <div class="paket-harga">Rp 200.000 <span>/ orang / malam</span></div>
+        <ul class="paket-includes">
+          <li>Homestay di rumah warga lokal</li>
+          <li>1x makan (masakan Sunda tradisional)</li>
+          <li>Akses area pancing Situ Cibeureum</li>
+          <li>Sarapan pagi</li>
+          <li>Parkir gratis</li>
+        </ul>
+        <a href="https://wa.me/6287874010019?text=Halo,%20saya%20ingin%20pesan%20Paket%20Akomodasi%20Desa%20Cidadap" class="btn btn-primary" target="_blank">Pesan Sekarang</a>
+      </div>
+
+      <!-- PAKET 3 — EDIT: Tambahkan atau ubah paket -->
+      <div class="paket-card fade-in">
+        <div class="paket-icon">🌿</div>
+        <h3>Gastro Trail</h3>
+        <p class="paket-desc">Wisata rasa & budaya desa — cicip gula aren, peyem, teh herbal, dan keripik singkong.</p>
+        <div class="paket-harga" style="font-size:1.4rem;">Hubungi Kami <span>untuk harga grup</span></div>
+        <ul class="paket-includes">
+          <li>Tur keliling desa bersama pemandu</li>
+          <li>Workshop membuat peyem / tapai singkong</li>
+          <li>Cicip gula aren langsung dari pohon</li>
+          <li>Makan siang + souvenir lokal</li>
+          <li>Durasi: setengah hari / satu hari penuh</li>
+        </ul>
+        <a href="https://wa.me/6287874010019?text=Halo,%20saya%20ingin%20info%20Paket%20Gastro%20Trail%20Desa%20Cidadap" class="btn btn-primary" target="_blank">Tanya Harga</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     AKTIVITAS
+     EDIT: Tambah/kurangi item aktivitas sesuai kebutuhan
+====================================================== -->
+<section id="aktivitas" class="section">
+  <div class="container">
+    <span class="section-label">Aktivitas</span>
+    <h2 class="section-title">Apa yang Bisa Kamu Lakukan?</h2>
+    <p class="section-subtitle">Dari aktivitas santai hingga edukasi budaya, semuanya tersedia di Desa Cidadap.</p>
+    <div class="aktivitas-list">
+
+      <div class="aktivitas-item fade-in">
+        <div class="aktivitas-icon">🎣</div>
+        <div>
+          <h4>Wisata Pancing</h4>
+          <p>Nikmati mancing di embung alami Situ Cibeureum dengan galadag bambu dan suasana pegunungan yang sejuk.</p>
+        </div>
+      </div>
+
+      <div class="aktivitas-item fade-in">
+        <div class="aktivitas-icon">🌴</div>
+        <div>
+          <h4>Tour Petani Aren</h4>
+          <p>Saksikan langsung petani memanjat pohon aren dengan tangga bambu tradisional, mengambil nira, dan membuat gula aren.</p>
+        </div>
+      </div>
+
+      <div class="aktivitas-item fade-in">
+        <div class="aktivitas-icon">🍠</div>
+        <div>
+          <h4>Workshop Peyem & Silase</h4>
+          <p>Berpartisipasi langsung membuat tapai singkong (peyem) khas Sunda. Bawa pulang produknya sebagai oleh-oleh.</p>
+        </div>
+      </div>
+
+      <div class="aktivitas-item fade-in">
+        <div class="aktivitas-icon">🏕️</div>
+        <div>
+          <h4>Outbound Tradisional</h4>
+          <p>Egrang, bakiak, gobak sodor, susur pematang sawah, dan outbound bambu. Seru untuk keluarga, sekolah, dan perusahaan.</p>
+        </div>
+      </div>
+
+      <div class="aktivitas-item fade-in">
+        <div class="aktivitas-icon">🏡</div>
+        <div>
+          <h4>Homestay Autentik</h4>
+          <p>Menginap di rumah warga yang terstandarisasi. Makan masakan tradisional Sunda langsung dari dapur warga.</p>
+        </div>
+      </div>
+
+      <div class="aktivitas-item fade-in">
+        <div class="aktivitas-icon">🏹</div>
+        <div>
+          <h4>Panahan Tradisional</h4>
+          <p>Shooting area dengan wahana panahan tradisional, arena RC offroad, dan wahana melukis untuk anak-anak di kawasan persawahan.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     EVENT
+     EDIT: Update info event terbaru (tanggal, harga, dll)
+====================================================== -->
+<section id="event" class="section">
+  <div class="container">
+    <span class="section-label">Event & Festival</span>
+    <h2 class="section-title">Agenda Wisata Terbaru</h2>
+    <p class="section-subtitle">Ikut event kami dan rasakan semangat festival desa yang autentik.</p>
+    <div class="event-grid">
+
+      <!-- EVENT 1 — EDIT: Ganti gambar, tanggal, harga -->
+      <div class="event-card fade-in">
+        <div class="event-img" style="background: url('images/event-grebeg-joran.jpg') center/cover; background-color:#1a3a2a;"></div>
+        <div class="event-body">
+          <span class="event-tag">🐟 Festival Mancing</span>
+          <h3>Grebeg Joran Situ Cibeureum</h3>
+          <p>Festival mancing rakyat bulanan di Situ Cibeureum. Hadiah jutaan rupiah + doorprize menarik! Slot terbatas hanya 100 joran.</p>
+          <div class="event-meta">
+            <!-- EDIT: Update tanggal event -->
+            <span>📅 Segera diumumkan (Mei 2026)</span>
+            <span>⏰ Mulai pagi hari</span>
+            <span>📍 Situ Cibeureum, Desa Cidadap</span>
+            <!-- EDIT: Update harga tiket -->
+            <span>🎫 Tiket Rakyat: Rp 75.000/joran (100 slot)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 2 — EDIT: Ganti gambar, tanggal -->
+      <div class="event-card fade-in">
+        <div class="event-img" style="background: url('images/event-layang.jpg') center/cover; background-color:#1a3a2a;"></div>
+        <div class="event-body">
+          <span class="event-tag">🪁 Festival Budaya</span>
+          <h3>Festival Layang-Layang Cidadap</h3>
+          <p>Festival budaya tahunan di kawasan sawah Desa Cidadap. Terbuka untuk umum, rayakan tradisi permainan Sunda bersama warga.</p>
+          <div class="event-meta">
+            <!-- EDIT: Update tanggal event -->
+            <span>📅 Segera diumumkan (2026)</span>
+            <span>⏰ 08.00 – Selesai</span>
+            <span>📍 Kawasan Sawah Desa Cidadap</span>
+            <span>🎫 Terbuka untuk Umum</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENT 3 — EDIT: Tambahkan event baru -->
+      <div class="event-card fade-in">
+        <div class="event-img" style="background: var(--hijau-tua); display:flex; align-items:center; justify-content:center;">
+          <span style="font-size:3rem;">🎊</span>
+        </div>
+        <div class="event-body">
+          <span class="event-tag">🌾 Festival Tahunan</span>
+          <h3>Event Selanjutnya</h3>
+          <p>Ikuti terus update event dan festival kami. Festival Aren, Festival Peyem, dan banyak kegiatan menarik lainnya akan segera hadir!</p>
+          <div class="event-meta">
+            <span>📅 Akan diumumkan segera</span>
+          </div>
+          <!-- EDIT: Ganti nomor WA -->
+          <a href="https://wa.me/6287874010019?text=Halo,%20saya%20ingin%20info%20event%20terbaru%20Desa%20Cidadap" class="btn btn-wa" style="margin-top:14px; font-size:0.83rem; padding:10px 18px;" target="_blank">
+            💬 Tanya Info Event
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     GALERI
+     EDIT: Ganti path gambar sesuai foto yang dimiliki
+     Tambah lebih banyak .galeri-item jika perlu
+====================================================== -->
+<section id="galeri" class="section">
+  <div class="container">
+    <span class="section-label" style="color:var(--emas-muda);">Galeri</span>
+    <h2 class="section-title" style="color:var(--putih);">Keindahan Desa Cidadap</h2>
+    <div class="galeri-grid">
+      <!-- EDIT: Ganti semua src gambar di bawah ini -->
+      <div class="galeri-item">
+        <img src="galeri-1.jpg" alt="Situ Cibeureum dari atas" loading="lazy" />
+      </div>
+      <div class="galeri-item">
+        <img src="galeri-2.jpg" alt="Aktivitas mancing" loading="lazy" />
+      </div>
+      <div class="galeri-item">
+        <img src="galeri-3.jpg" alt="Panorama sawah" loading="lazy" />
+      </div>
+      <div class="galeri-item">
+        <img src="galeri-4.jpg" alt="Kuliner Sunda" loading="lazy" />
+      </div>
+      <div class="galeri-item">
+        <img src="galeri-5.jpg" alt="Outbound tradisional" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CARA PESAN
+====================================================== -->
+<section id="pesan" class="section">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:12px;">
+      <span class="section-label">Cara Pesan</span>
+      <h2 class="section-title" style="margin:0 auto 10px; max-width:500px;">Mudah & Cepat via WhatsApp</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Tidak perlu ribet, cukup hubungi kami dan semua akan diurus.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-in">
+        <div class="step-num">1</div>
+        <h4>Pilih Paket</h4>
+        <p>Tentukan paket wisata dan jumlah peserta yang Anda inginkan.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">2</div>
+        <h4>Hubungi via WA</h4>
+        <p>Kirim pesan ke nomor WhatsApp kami untuk konfirmasi dan tanya-tanya.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">3</div>
+        <h4>Konfirmasi Tanggal</h4>
+        <p>Sepakati jadwal kunjungan dan detail persiapan bersama tim kami.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">4</div>
+        <h4>Datang & Nikmati!</h4>
+        <p>Hadir di Desa Cidadap dan rasakan pengalaman wisata desa yang sesungguhnya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     KONTAK
+     EDIT: Ganti semua info kontak dan peta Google Maps
+====================================================== -->
+<section id="kontak" class="section">
+  <div class="container">
+    <span class="section-label">Hubungi Kami</span>
+    <h2 class="section-title">Informasi & Pemesanan</h2>
+    <div class="kontak-grid" style="margin-top:40px;">
+      <div class="kontak-info">
+
+        <!-- EDIT: Ganti nomor WhatsApp -->
+        <div class="kontak-item">
+          <div class="k-icon">💬</div>
+          <div>
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/6287874010019" target="_blank">+62 878-7401-0019</a>
+            <p>Ketua POKDARWIS: Yayang Hendra Gunawan</p>
+          </div>
+        </div>
+
+        <!-- EDIT: Ganti alamat jika berbeda -->
+        <div class="kontak-item">
+          <div class="k-icon">📍</div>
+          <div>
+            <strong>Alamat</strong>
+            <p>Desa Cidadap, Kecamatan Campaka,<br>Kabupaten Cianjur, Jawa Barat</p>
+          </div>
+        </div>
+
+        <!-- EDIT: Ganti jam operasional jika berubah -->
+        <div class="kontak-item">
+          <div class="k-icon">🕐</div>
+          <div>
+            <strong>Jam Operasional</strong>
+            <p>Selasa – Minggu: 07.00 – 18.00 WIB<br>Senin: Tutup</p>
+          </div>
+        </div>
+
+        <!-- EDIT: Ganti link media sosial -->
+        <div class="kontak-item">
+          <div class="k-icon">📱</div>
+          <div>
+            <strong>Media Sosial</strong>
+            <a href="https://www.instagram.com/pokdarwiscidadap?igsh=MXBkY2txNWY5aXNvdA==" target="_blank">📷 @pokdarwiscidadap</a>
+            <a href="https://www.tiktok.com/@desawisatacidadap" target="_blank" style="display:block; margin-top:4px;">🎵 @desawisatacidadap</a>
+          </div>
+        </div>
+
+        <!-- EDIT: Koordinat GPS dari Jurnal -->
+        <div class="kontak-item">
+          <div class="k-icon">🗺️</div>
+          <div>
+            <strong>Koordinat GPS</strong>
+            <p>-7.0171501°, 107.1520774°<br>
+            <a href="https://maps.google.com/?q=-7.0171501,107.1520774" target="_blank">Buka di Google Maps →</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="kontak-map fade-in">
+        <!-- EDIT: Ganti src dengan embed URL Google Maps lokasi Anda
+             Cara: Buka Google Maps → cari lokasi → Share → Embed a map → Copy HTML
+             Atau gunakan koordinat langsung seperti di bawah -->
+        <iframe
+          src="https://maps.google.com/maps?q=-7.0171501,107.1520774&z=15&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi Desa Wisata Cidadap">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     CTA BANNER
+     EDIT: Ganti nomor WhatsApp
+====================================================== -->
+<section id="cta">
+  <div class="container">
+    <h2>Siap Merasakan Keindahan Desa Cidadap?</h2>
+    <p>Pesan sekarang dan dapatkan pengalaman wisata desa yang tak terlupakan bersama keluarga.</p>
+    <div class="actions">
+      <!-- EDIT: Ganti nomor WhatsApp -->
+      <a href="https://wa.me/6287874010019?text=Halo%20POKDARWIS%20Cidadap,%20saya%20ingin%20tanya%20info%20wisata" class="btn btn-wa" target="_blank" style="font-size:1rem; padding:15px 30px;">
+        💬 Chat via WhatsApp
+      </a>
+      <a href="#paket" class="btn btn-outline" style="font-size:1rem; padding:15px 30px;">
+        Lihat Semua Paket
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <!-- EDIT: Pastikan logo ada di images/logo.png -->
+        <img src="logo.png" alt="Logo POKDARWIS" />
+        <strong>POKDARWIS Situ Cibeureum</strong>
+        <p>Kelompok Sadar Wisata Desa Cidadap, Kec. Campaka, Kab. Cianjur, Jawa Barat. Beroperasi sejak Maret 2026.</p>
+        <!-- EDIT: Ganti link media sosial -->
+        <div class="sosmed">
+          <a href="https://www.instagram.com/pokdarwiscidadap?igsh=MXBkY2txNWY5aXNvdA==" target="_blank" title="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@desawisatacidadap" target="_blank" title="TikTok">🎵</a>
+          <a href="https://wa.me/6287874010019" target="_blank" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#zona">Zona Wisata</a></li>
+          <li><a href="#paket">Paket & Harga</a></li>
+          <li><a href="#aktivitas">Aktivitas</a></li>
+          <li><a href="#event">Event & Festival</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Zona Wisata</h4>
+        <ul>
+          <li><a href="#zona">🎣 Situ Cibeureum</a></li>
+          <li><a href="#zona">💦 Curug Badak</a></li>
+          <li><a href="#zona">🌾 Situ Gelam</a></li>
+          <li><a href="#zona">🏕️ Perbukitan & Sawah</a></li>
+          <li><a href="#zona">🍠 Kampung Mekarsari</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 POKDARWIS Situ Cibeureum · Desa Wisata Cidadap · Cianjur, Jawa Barat</p>
+      <p style="margin-top:6px;">SK Kepala Desa No. 141/6/II/2026 · Berlandaskan Perda Jabar No. 2 Tahun 2022</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button — EDIT: Ganti nomor WA -->
+<a href="https://wa.me/6287874010019?text=Halo%20POKDARWIS%20Cidadap!" class="wa-float" target="_blank" title="Chat WhatsApp">
+  💬
+</a>
+
+<!-- ====================================================== -->
+<script>
+  // Hamburger menu mobile
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  // Tutup menu saat link diklik (mobile)
+  document.querySelectorAll('#navLinks a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // Animasi scroll (fade-in)
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
