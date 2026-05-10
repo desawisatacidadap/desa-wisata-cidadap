@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Halaman Utama -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/hero.jpg</image:loc>
+      <image:title>Desa Wisata Cidadap - Cianjur, Jawa Barat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/foto-desa.jpg</image:loc>
+      <image:title>Pemandangan Desa Wisata Cidadap</image:title>
+    </image:image>
+  </url>
+
+  <!-- Seksi Tentang -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#tentang</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/tentang.jpg</image:loc>
+      <image:title>Tentang Desa Wisata Cidadap Cianjur</image:title>
+    </image:image>
+  </url>
+
+  <!-- Seksi Destinasi / Wisata -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#destinasi</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/galeri-1.jpg</image:loc>
+      <image:title>Situ Cibeureum Desa Wisata Cidadap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/galeri-2.jpg</image:loc>
+      <image:title>Curug Badak Desa Wisata Cidadap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/galeri-3.jpg</image:loc>
+      <image:title>Situ Gelam Desa Wisata Cidadap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/galeri-4.jpg</image:loc>
+      <image:title>Perbukitan dan Persawahan Cidadap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/galeri-5.jpg</image:loc>
+      <image:title>Wisata Alam Desa Cidadap Campaka Cianjur</image:title>
+    </image:image>
+  </url>
+
+  <!-- Seksi Glamping -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#glamping</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/glamping.jpg</image:loc>
+      <image:title>Glamping Situ Cibeureum Desa Wisata Cidadap</image:title>
+    </image:image>
+  </url>
+
+  <!-- Seksi Paintball -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#paintball</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/paintball.jpg</image:loc>
+      <image:title>Paintball Arena Desa Wisata Cidadap Cianjur</image:title>
+    </image:image>
+  </url>
+
+  <!-- Seksi Event -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#event</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/event-grebeg.jpg</image:loc>
+      <image:title>Grebeg Joran Situ Cibeureum - Festival Mancing Cidadap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/event-kolecer.jpg</image:loc>
+      <image:title>Festival Kolecer Desa Wisata Cidadap</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/event-layang.jpg</image:loc>
+      <image:title>Festival Layang-Layang Desa Wisata Cidadap</image:title>
+    </image:image>
+  </url>
+
+  <!-- Seksi Galeri -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#galeri</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Seksi Kontak -->
+  <url>
+    <loc>https://desawisatacidadap.github.io/desa-wisata-cidadap/#kontak</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
