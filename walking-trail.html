@@ -3,191 +3,273 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Walking Trail Desa Wisata Cidadap - Jelajahi sawah, kebun kopi, dan Situ Cibeureum">
+<meta name="description" content="Walking Trail Desa Wisata Cidadap - Jelajahi sawah, kebun kopi, Curug Badak dan Situ Cibeureum">
 <title>Walking Trail - Desa Wisata Cidadap</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Poppins',sans-serif;background:#f5f0e6;color:#2a2a2a;}
-  nav{background:#1b3d1c;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.3);}
-  .nav-title{color:#fff;font-weight:800;font-size:15px;}
-  .nav-sub{color:#c9a96e;font-size:10px;font-weight:600;letter-spacing:1px;}
-  .nav-back{color:#c9a96e;text-decoration:none;font-size:13px;font-weight:600;}
-  .hero{position:relative;height:260px;overflow:hidden;background:#1b3d1c;}
-  .hero img{width:100%;height:100%;object-fit:cover;opacity:0.75;}
-  .hero-overlay{position:absolute;inset:0;background:linear-gradient(175deg,rgba(0,0,0,0.1),rgba(15,38,10,0.85));}
-  .hero-content{position:absolute;bottom:0;left:0;right:0;padding:20px;}
-  .hero-tag{display:inline-block;background:linear-gradient(135deg,#e8a020,#c67e10);color:#fff;font-size:10px;font-weight:800;letter-spacing:3px;padding:4px 14px;border-radius:20px;margin-bottom:8px;}
-  .hero-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#fff;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,0.5);}
-  .hero-sub{color:#c9a96e;font-size:12px;font-weight:600;margin-top:5px;}
-  .stats{display:flex;background:#2c5f2d;}
-  .stat{flex:1;padding:13px 6px;text-align:center;border-right:1px solid rgba(255,255,255,0.15);}
-  .stat:last-child{border-right:none;}
-  .stat-icon{font-size:18px;}
-  .stat-val{font-size:12px;font-weight:800;color:#fff;margin-top:2px;}
-  .stat-label{font-size:8.5px;color:#a8cfa8;text-transform:uppercase;letter-spacing:0.5px;}
-  .section{padding:22px 18px;}
-  .sec-label{font-size:10px;font-weight:800;color:#c9a96e;letter-spacing:3px;text-transform:uppercase;margin-bottom:5px;}
-  .sec-heading{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#1b3d1c;margin-bottom:10px;line-height:1.3;}
-  .sec-text{font-size:12.5px;color:#5a5a5a;line-height:1.7;}
-  .route-card{background:#fff;border-radius:12px;overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
-  .route-img{width:100%;height:180px;object-fit:cover;background:#2c5f2d;}
-  .route-body{padding:15px;}
-  .route-badge{display:inline-block;padding:4px 12px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:2px;color:#fff;margin-bottom:7px;}
-  .b1{background:linear-gradient(135deg,#7c5232,#a06840);}
-  .b2{background:linear-gradient(135deg,#4a2c0a,#7b4f2e);}
-  .b3{background:linear-gradient(135deg,#1b3d1c,#2c5f2d);}
-  .route-name{font-size:16px;font-weight:800;color:#1b3d1c;margin-bottom:6px;}
-  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:9px;}
-  .tag{background:#f0e8d5;color:#7c5232;font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;}
-  .route-desc{font-size:12px;color:#5a5a5a;line-height:1.65;}
-  .cps{margin-top:11px;padding-top:11px;border-top:1px solid #f0e8d5;}
-  .cp-label{font-size:9.5px;font-weight:800;color:#c9a96e;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px;}
-  .cp{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px;}
-  .cp-num{width:22px;height:22px;border-radius:50%;background:#2c5f2d;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .cp-num.e{background:#7c5232;}
-  .cp-t{font-size:11px;font-weight:700;color:#1b3d1c;}
-  .cp-d{font-size:9.5px;color:#888;margin-top:1px;}
-  .coffee-sec{background:linear-gradient(135deg,#2c1a06,#4a2c0a);padding:20px 18px;}
-  .coffee-sec .sec-label{color:#c9a96e;}
-  .coffee-sec .sec-heading{color:#fff;font-size:19px;}
-  .coffee-img{width:100%;height:180px;object-fit:cover;border-radius:9px;margin-bottom:12px;border:2px solid #c9a96e;}
-  .coffee-desc{font-size:12px;color:#e8ddd0;line-height:1.65;margin-bottom:13px;}
-  .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
-  .menu-item{background:rgba(255,255,255,0.08);border-radius:8px;padding:10px;border:1px solid rgba(201,169,110,0.25);}
-  .menu-name{font-size:10.5px;font-weight:700;color:#c9a96e;}
-  .menu-price{font-size:11px;color:#fff;font-weight:800;margin-top:2px;}
-  .menu-sub{font-size:9px;color:#a09080;margin-top:1px;}
-  .situ-sec{background:#fff;padding:20px 18px;}
-  .situ-img{width:100%;height:180px;object-fit:cover;border-radius:9px;margin-bottom:13px;}
-  .rakit-banner{background:linear-gradient(135deg,#1b3d1c,#2c5f2d);border-radius:9px;padding:14px;display:flex;align-items:center;gap:11px;margin-top:13px;}
-  .rakit-icon{font-size:28px;}
-  .rakit-t{font-size:12.5px;font-weight:800;color:#c9a96e;}
-  .rakit-d{font-size:10px;color:#d0e8d0;margin-top:3px;line-height:1.4;}
-  .info-sec{background:#f0e8d5;padding:20px 18px;}
-  .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px;}
-  .info-card{background:#fff;border-radius:9px;padding:13px;}
-  .info-card-title{font-size:10.5px;font-weight:800;color:#1b3d1c;margin-bottom:7px;}
-  .info-list{list-style:none;}
-  .info-list li{font-size:10px;color:#5a5a5a;padding:3px 0;border-bottom:1px solid #f5f0e6;line-height:1.4;}
-  .info-list li:last-child{border-bottom:none;}
-  .info-list li::before{content:"› ";color:#2c5f2d;font-weight:700;}
-  .cta-sec{background:linear-gradient(135deg,#1b3d1c,#2c5f2d);padding:28px 18px;text-align:center;}
-  .cta-title{font-family:'Playfair Display',serif;font-size:21px;font-weight:700;color:#fff;margin-bottom:6px;}
-  .cta-sub{font-size:12px;color:#a8d0a8;margin-bottom:18px;line-height:1.6;}
-  .cta-btn{display:inline-block;background:linear-gradient(135deg,#c67e10,#e8a020);color:#fff;font-size:14px;font-weight:800;padding:13px 30px;border-radius:30px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.25);}
-  .cta-contacts{display:flex;justify-content:center;gap:18px;margin-top:18px;flex-wrap:wrap;}
-  .cta-c{color:#c9a96e;font-size:11px;font-weight:600;}
-  footer{background:#111;padding:16px 18px;text-align:center;}
-  footer p{font-size:10px;color:#666;line-height:1.7;}
-  footer a{color:#c9a96e;text-decoration:none;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background:#f5f0e6;color:#2a2a2a;}
+nav{background:#1b3d1c;padding:0 18px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.3);}
+.nav-left{display:flex;align-items:center;gap:10px;}
+.nav-logo{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.3);}
+.nav-title{color:#fff;font-weight:800;font-size:13px;line-height:1.2;}
+.nav-sub{color:#c9a96e;font-size:9px;font-weight:600;letter-spacing:1px;}
+.nav-back{color:#c9a96e;text-decoration:none;font-size:12px;font-weight:600;background:rgba(255,255,255,0.1);padding:6px 12px;border-radius:20px;}
+
+/* HERO */
+.hero{position:relative;height:260px;overflow:hidden;}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(175deg,rgba(0,0,0,0.1),rgba(15,38,10,0.85));}
+.hero-ct{position:absolute;bottom:0;left:0;right:0;padding:18px 18px 22px;}
+.hero-tag{display:inline-block;background:linear-gradient(135deg,#e8a020,#c67e10);color:#fff;font-size:9.5px;font-weight:800;letter-spacing:3px;padding:4px 14px;border-radius:20px;margin-bottom:8px;}
+.hero-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#fff;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,0.5);}
+.hero-sub{color:#c9a96e;font-size:11px;font-weight:600;margin-top:5px;}
+
+/* STATS */
+.stats{display:flex;background:#2c5f2d;}
+.stat{flex:1;padding:12px 6px;text-align:center;border-right:1px solid rgba(255,255,255,0.15);}
+.stat:last-child{border-right:none;}
+.stat-icon{font-size:16px;}
+.stat-val{font-size:12px;font-weight:800;color:#fff;margin-top:2px;}
+.stat-lbl{font-size:8px;color:#a8cfa8;text-transform:uppercase;letter-spacing:0.5px;}
+
+/* SECTIONS */
+.sec{padding:20px 18px;}
+.sec-alt{background:#ede6d5;}
+.sec-eye{font-size:9.5px;font-weight:800;color:#c9a96e;letter-spacing:3px;text-transform:uppercase;margin-bottom:5px;}
+.sec-h{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#1b3d1c;margin-bottom:10px;line-height:1.3;}
+.sec-p{font-size:12.5px;color:#5a5a5a;line-height:1.7;}
+
+/* ROUTE CARDS */
+.rcard{background:#fff;border-radius:12px;overflow:hidden;margin-bottom:14px;box-shadow:0 4px 18px rgba(0,0,0,0.1);}
+.rcard-img{width:100%;height:190px;object-fit:cover;}
+.rcard-body{padding:14px;}
+.badge{display:inline-block;padding:4px 11px;border-radius:4px;font-size:9.5px;font-weight:800;letter-spacing:1.5px;color:#fff;margin-bottom:7px;}
+.b1{background:linear-gradient(135deg,#7c5232,#a06840);}
+.b2{background:linear-gradient(135deg,#4a2c0a,#7b4f2e);}
+.b3{background:linear-gradient(135deg,#1b3d1c,#2c5f2d);}
+.rcard-name{font-size:16px;font-weight:800;color:#1b3d1c;margin-bottom:6px;}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:9px;}
+.tag{background:#f0e8d5;color:#7c5232;font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;}
+.rcard-desc{font-size:12px;color:#5a5a5a;line-height:1.65;}
+
+/* CHECKPOINT */
+.cps{margin-top:12px;padding-top:12px;border-top:1px solid #f0e8d5;}
+.cp-lbl{font-size:9px;font-weight:800;color:#c9a96e;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;}
+.cp{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px;}
+.cpn{width:22px;height:22px;border-radius:50%;background:#2c5f2d;color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cpn.e{background:#7c5232;}
+.cpt{font-size:11px;font-weight:700;color:#1b3d1c;}
+.cpd{font-size:9.5px;color:#888;margin-top:1px;}
+
+/* SPOT PHOTOS */
+.spots{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.spot{border-radius:8px;overflow:hidden;position:relative;}
+.spot img{width:100%;height:110px;object-fit:cover;}
+.spot-lbl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(0,0,0,0.7),transparent);color:#fff;font-size:9.5px;font-weight:700;padding:6px 8px;}
+.spot.wide{grid-column:span 2;}
+.spot.wide img{height:130px;}
+
+/* COFFEE */
+.coffee-sec{background:linear-gradient(135deg,#2c1a06,#4a2c0a);padding:20px 18px;}
+.coffee-sec .sec-eye{color:#c9a96e;}
+.coffee-sec .sec-h{color:#fff;font-size:18px;}
+.coffee-img{width:100%;height:160px;object-fit:cover;border-radius:9px;margin-bottom:12px;border:2px solid #c9a96e;}
+.coffee-desc{font-size:12px;color:#e8ddd0;line-height:1.65;margin-bottom:13px;}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+.mi{background:rgba(255,255,255,0.08);border-radius:7px;padding:9px;border:1px solid rgba(201,169,110,0.25);}
+.mi-name{font-size:10px;font-weight:700;color:#c9a96e;}
+.mi-price{font-size:11px;color:#fff;font-weight:800;margin-top:2px;}
+.mi-sub{font-size:9px;color:#a09080;margin-top:1px;}
+
+/* SITU */
+.situ-img{width:100%;height:180px;object-fit:cover;border-radius:9px;margin-bottom:13px;}
+.rakit{background:linear-gradient(135deg,#1b3d1c,#2c5f2d);border-radius:9px;padding:13px;display:flex;align-items:center;gap:11px;margin-top:12px;}
+.rakit-icon{font-size:26px;}
+.rakit-t{font-size:12px;font-weight:800;color:#c9a96e;}
+.rakit-d{font-size:10px;color:#d0e8d0;margin-top:3px;line-height:1.4;}
+
+/* INFO */
+.info-sec{background:#f0e8d5;padding:20px 18px;}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px;}
+.icard{background:#fff;border-radius:9px;padding:12px;}
+.icard-t{font-size:10.5px;font-weight:800;color:#1b3d1c;margin-bottom:7px;}
+.ilist{list-style:none;}
+.ilist li{font-size:10px;color:#5a5a5a;padding:3px 0;border-bottom:1px solid #f5f0e6;line-height:1.4;}
+.ilist li:last-child{border-bottom:none;}
+.ilist li::before{content:"› ";color:#2c5f2d;font-weight:700;}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,#1b3d1c,#2c5f2d);padding:26px 18px;text-align:center;}
+.cta-t{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#fff;margin-bottom:6px;}
+.cta-sub{font-size:12px;color:#a8d0a8;margin-bottom:18px;line-height:1.6;}
+.cta-btn{display:inline-block;background:linear-gradient(135deg,#c67e10,#e8a020);color:#fff;font-size:14px;font-weight:800;padding:13px 28px;border-radius:30px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.25);}
+.cta-c{display:flex;justify-content:center;gap:16px;margin-top:16px;flex-wrap:wrap;}
+.cta-ci{color:#c9a96e;font-size:11px;font-weight:600;}
+footer{background:#111;padding:14px 18px;text-align:center;}
+footer p{font-size:10px;color:#666;line-height:1.7;}
+footer a{color:#c9a96e;text-decoration:none;}
 </style>
 </head>
 <body>
+
 <nav>
-  <div><div class="nav-title">Desa Wisata Cidadap</div><div class="nav-sub">Campaka · Cianjur</div></div>
+  <div class="nav-left">
+    <img class="nav-logo" src="logo.png" alt="Logo" onerror="this.style.display='none'">
+    <div><div class="nav-title">Desa Wisata Cidadap</div><div class="nav-sub">Campaka · Cianjur</div></div>
+  </div>
   <a href="index.html" class="nav-back">← Beranda</a>
 </nav>
+
 <div class="hero">
-  <img src="foto-desa.jpg" alt="Desa Wisata Cidadap" onerror="this.style.display='none'">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
+  <img src="trail-hero.jpg" alt="Walking Trail Cidadap" onerror="this.style.background='#1b3d1c'">
+  <div class="hero-ov"></div>
+  <div class="hero-ct">
     <div class="hero-tag">✦ Program Unggulan ✦</div>
     <div class="hero-title">Walking Trail<br>Desa Wisata Cidadap</div>
     <div class="hero-sub">📍 Kec. Campaka · Kab. Cianjur · Jawa Barat</div>
   </div>
 </div>
+
 <div class="stats">
-  <div class="stat"><div class="stat-icon">🥾</div><div class="stat-val">3 Rute</div><div class="stat-label">Pilihan</div></div>
-  <div class="stat"><div class="stat-icon">⏱</div><div class="stat-val">1–4 Jam</div><div class="stat-label">Durasi</div></div>
-  <div class="stat"><div class="stat-icon">📏</div><div class="stat-val">2–8 Km</div><div class="stat-label">Jarak</div></div>
-  <div class="stat"><div class="stat-icon">👥</div><div class="stat-val">Maks 20</div><div class="stat-label">Per Grup</div></div>
+  <div class="stat"><div class="stat-icon">🥾</div><div class="stat-val">3 Rute</div><div class="stat-lbl">Pilihan</div></div>
+  <div class="stat"><div class="stat-icon">⏱</div><div class="stat-val">1–4 Jam</div><div class="stat-lbl">Durasi</div></div>
+  <div class="stat"><div class="stat-icon">📏</div><div class="stat-val">2–8 Km</div><div class="stat-lbl">Jarak</div></div>
+  <div class="stat"><div class="stat-icon">☕</div><div class="stat-val">Coffee</div><div class="stat-lbl">Deck</div></div>
 </div>
-<div class="section">
-  <div class="sec-label">Tentang Program</div>
-  <div class="sec-heading">Jelajahi Alam Desa yang Sesungguhnya</div>
-  <div class="sec-text">Program Walking Trail Desa Wisata Cidadap mengajak Anda menyusuri keindahan alam desa yang autentik — dari hamparan sawah hijau, kebun kopi Robusta, hutan bambu tropis, hingga Situ Cibeureum yang memukau. Dipandu oleh warga lokal yang ramah dan berpengalaman.</div>
+
+<div class="sec">
+  <div class="sec-eye">Tentang Program</div>
+  <div class="sec-h">Jelajahi Alam Desa yang Sesungguhnya</div>
+  <div class="sec-p">Program Walking Trail Desa Wisata Cidadap mengajak Anda menyusuri keindahan alam desa yang autentik — dari hamparan sawah hijau, irigasi tradisional, kebun kopi Robusta, hutan bambu tropis, hingga Situ Cibeureum dan Curug Badak. Dipandu oleh warga lokal yang ramah dan berpengalaman.</div>
 </div>
-<div class="section" style="padding-top:0">
-  <div class="route-card">
-    <img class="route-img" src="galeri-1.jpg" alt="Rute 1 Sawah" onerror="this.style.background='#7c5232'">
-    <div class="route-body">
-      <div class="route-badge b1">Rute 1</div>
-      <div class="route-name">🌾 Panorama Sawah & Jembatan</div>
-      <div class="tags"><span class="tag">🌿 Mudah</span><span class="tag">⏱ 1–1.5 Jam</span><span class="tag">📏 ~2 Km</span><span class="tag">👶 Cocok Keluarga</span></div>
-      <div class="route-desc">Rute ramah untuk pemula dan keluarga. Menyusuri jalan setapak di sela hamparan sawah hijau, melewati jembatan irigasi dengan panorama gunung yang memukau, dan berinteraksi dengan petani lokal.</div>
-      <div class="cps">
-        <div class="cp-label">📍 Checkpoint Jalur</div>
-        <div class="cp"><div class="cp-num e">1</div><div><div class="cp-t">Start: Bale Desa Cidadap</div><div class="cp-d">Titik kumpul dan briefing pemandu</div></div></div>
-        <div class="cp"><div class="cp-num">2</div><div><div class="cp-t">Jembatan Irigasi</div><div class="cp-d">Spot foto terbaik dengan latar sawah & gunung</div></div></div>
-        <div class="cp"><div class="cp-num">3</div><div><div class="cp-t">Sudut Pandang Sawah</div><div class="cp-d">Area istirahat, snack lokal tersedia</div></div></div>
-        <div class="cp"><div class="cp-num">4</div><div><div class="cp-t">Kampung Warga</div><div class="cp-d">Interaksi dengan petani & aktivitas pertanian</div></div></div>
-        <div class="cp"><div class="cp-num e">5</div><div><div class="cp-t">Finish: Warung Desa</div><div class="cp-d">Istirahat & kuliner lokal</div></div></div>
-      </div>
+
+<div class="sec sec-alt" style="padding-top:0;padding-bottom:24px;">
+
+<!-- RUTE 1 -->
+<div style="padding-top:20px;">
+<div class="rcard">
+  <img class="rcard-img" src="trail-rute1.jpg" alt="Rute 1 Sawah" onerror="this.style.background='#7c5232'">
+  <div class="rcard-body">
+    <div class="badge b1">Rute 1</div>
+    <div class="rcard-name">🌾 Panorama Sawah & Jembatan</div>
+    <div class="tags">
+      <span class="tag">🌿 Mudah</span><span class="tag">⏱ 1–1.5 Jam</span>
+      <span class="tag">📏 ~2 Km</span><span class="tag">👶 Cocok Keluarga</span>
     </div>
-  </div>
-  <div class="route-card">
-    <img class="route-img" src="galeri-2.jpg" alt="Rute 2 Hutan Kopi" onerror="this.style.background='#4a2c0a'">
-    <div class="route-body">
-      <div class="route-badge b2">Rute 2</div>
-      <div class="route-name">🌲 Hutan Tropis & Kebun Kopi</div>
-      <div class="tags"><span class="tag">🌲 Moderat</span><span class="tag">⏱ 2–3 Jam</span><span class="tag">📏 ~4 Km</span><span class="tag">☕ Coffee Deck</span></div>
-      <div class="route-desc">Menelusuri kebun sayuran organik, perkebunan Kopi Robusta Cidadap, hutan bambu yang sejuk, dan berakhir di Coffee Deck — menikmati kopi segar langsung di tengah kebun kopi.</div>
+    <div class="rcard-desc">Rute ramah untuk pemula dan keluarga. Menyusuri jalan setapak di sela hamparan sawah hijau, melewati jembatan irigasi dengan panorama gunung yang memukau, dan berinteraksi dengan petani lokal.</div>
+    <div class="spots">
+      <div class="spot"><img src="trail-irigasi.jpg" alt="Irigasi Sawah" onerror="this.style.background='#7c5232'"><div class="spot-lbl">Irigasi Tradisional</div></div>
+      <div class="spot"><img src="trail-sawah.jpg" alt="Jalur Desa" onerror="this.style.background='#7c5232'"><div class="spot-lbl">Jalur Desa</div></div>
     </div>
-  </div>
-  <div class="route-card">
-    <img class="route-img" src="foto-desa.jpg" alt="Rute 3 Situ Cibeureum" onerror="this.style.background='#1b3d1c'">
-    <div class="route-body">
-      <div class="route-badge b3">Rute 3</div>
-      <div class="route-name">⛰️ Perbukitan & Situ Cibeureum</div>
-      <div class="tags"><span class="tag">⛰️ Menantang</span><span class="tag">⏱ 3–4 Jam</span><span class="tag">📏 ~8 Km</span><span class="tag">💪 Aktif & Fit</span></div>
-      <div class="route-desc">Mendaki perbukitan hijau dengan panorama 360°, melewati tebing erosi merah yang dramatis, dan berakhir di tepian Situ Cibeureum untuk wisata mancing atau rakit apung.</div>
+    <div class="cps">
+      <div class="cp-lbl">📍 Checkpoint Jalur</div>
+      <div class="cp"><div class="cpn e">1</div><div><div class="cpt">Start: Bale Desa Cidadap</div><div class="cpd">Titik kumpul & briefing pemandu</div></div></div>
+      <div class="cp"><div class="cpn">2</div><div><div class="cpt">Jembatan Irigasi</div><div class="cpd">Spot foto terbaik dengan latar sawah & gunung</div></div></div>
+      <div class="cp"><div class="cpn">3</div><div><div class="cpt">Sudut Pandang Sawah</div><div class="cpd">Area istirahat, snack lokal tersedia</div></div></div>
+      <div class="cp"><div class="cpn">4</div><div><div class="cpt">Kampung Warga</div><div class="cpd">Interaksi dengan petani & aktivitas desa</div></div></div>
+      <div class="cp"><div class="cpn e">5</div><div><div class="cpt">Finish: Warung Desa</div><div class="cpd">Istirahat & kuliner lokal</div></div></div>
     </div>
   </div>
 </div>
+
+<!-- RUTE 2 -->
+<div class="rcard">
+  <img class="rcard-img" src="trail-rute2.jpg" alt="Rute 2 Hutan" style="object-position:center 20%;" onerror="this.style.background='#4a2c0a'">
+  <div class="rcard-body">
+    <div class="badge b2">Rute 2</div>
+    <div class="rcard-name">🌲 Hutan Tropis & Kebun Kopi</div>
+    <div class="tags">
+      <span class="tag">🌲 Moderat</span><span class="tag">⏱ 2–3 Jam</span>
+      <span class="tag">📏 ~4 Km</span><span class="tag">☕ Coffee Deck</span>
+    </div>
+    <div class="rcard-desc">Menelusuri kebun sayuran organik warga, perkebunan Kopi Robusta Cidadap, dan hutan bambu yang sejuk. Berakhir di Coffee Deck — menikmati kopi segar langsung di tengah kebun kopi yang rindang.</div>
+    <div class="spots">
+      <div class="spot"><img src="trail-jalur.jpg" alt="Jalur Hutan" onerror="this.style.background='#4a2c0a'"><div class="spot-lbl">Jalur Hutan Bambu</div></div>
+      <div class="spot"><img src="zona-kopi.jpg" alt="Kebun Kopi" onerror="this.style.background='#4a2c0a'"><div class="spot-lbl">Coffee Deck</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- RUTE 3 -->
+<div class="rcard">
+  <img class="rcard-img" src="trail-rute3.jpg" alt="Rute 3 Curug" onerror="this.style.background='#1b3d1c'">
+  <div class="rcard-body">
+    <div class="badge b3">Rute 3</div>
+    <div class="rcard-name">⛰️ Perbukitan & Situ Cibeureum</div>
+    <div class="tags">
+      <span class="tag">⛰️ Menantang</span><span class="tag">⏱ 3–4 Jam</span>
+      <span class="tag">📏 ~8 Km</span><span class="tag">💪 Aktif & Fit</span>
+    </div>
+    <div class="rcard-desc">Mendaki perbukitan hijau dengan panorama 360°, melewati Curug Badak yang segar, dan berakhir di tepian Situ Cibeureum untuk wisata mancing atau rakit apung.</div>
+    <div class="spots">
+      <div class="spot wide"><img src="trail-bukit.jpg" alt="Panorama Perbukitan" onerror="this.style.background='#1b3d1c'"><div class="spot-lbl">Panorama Perbukitan Cidadap</div></div>
+      <div class="spot"><img src="trail-curug.jpg" alt="Curug Badak" onerror="this.style.background='#1b3d1c'"><div class="spot-lbl">Curug Badak</div></div>
+      <div class="spot"><img src="zona-situ.jpg" alt="Situ Cibeureum" onerror="this.style.background='#1b3d1c'"><div class="spot-lbl">Situ Cibeureum</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- KAMPUNG -->
+<div class="sec">
+  <div class="sec-eye">Pengalaman Budaya</div>
+  <div class="sec-h">🏡 Menyusuri Kampung Warga</div>
+  <img src="trail-kampung.jpg" alt="Kampung Warga" style="width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:12px;" onerror="this.style.background='#7c5232'">
+  <div class="sec-p">Setiap rute melewati kampung warga Desa Cidadap yang hangat dan bersahaja. Sapa petani di sawah, lihat aktivitas sehari-hari, dan rasakan keramahan budaya Sunda yang sesungguhnya.</div>
+</div>
+
+<!-- COFFEE DECK -->
 <div class="coffee-sec">
-  <div class="sec-label">Destinasi Istimewa</div>
-  <div class="sec-heading">☕ Coffee Deck Cidadap</div>
-  <img class="coffee-img" src="galeri-1.jpg" alt="Coffee Deck" onerror="this.style.display='none'">
-  <div class="coffee-desc">Pengalaman unik menikmati kopi Robusta Cidadap yang baru dipetik dan diseduh langsung di persimpangan kebun kopi yang dikelilingi pepohonan tropis yang rindang.</div>
+  <div class="sec-eye">Destinasi Istimewa</div>
+  <div class="sec-h">☕ Coffee Deck Cidadap</div>
+  <img class="coffee-img" src="zona-kopi.jpg" alt="Coffee Deck" onerror="this.style.background='#4a2c0a'">
+  <div class="coffee-desc">Pengalaman unik menikmati Kopi Robusta Cidadap yang baru dipetik dan diseduh langsung di persimpangan kebun kopi yang dikelilingi pepohonan tropis yang rindang.</div>
   <div class="menu-grid">
-    <div class="menu-item"><div class="menu-name">Kopi Tubruk Cidadap</div><div class="menu-price">Rp 8.000</div><div class="menu-sub">Robusta lokal + gula aren</div></div>
-    <div class="menu-item"><div class="menu-name">Kopi Susu Gula Aren</div><div class="menu-price">Rp 12.000</div><div class="menu-sub">Espresso + susu segar</div></div>
-    <div class="menu-item"><div class="menu-name">Teh Kumis Kucing</div><div class="menu-price">Rp 7.000</div><div class="menu-sub">Herbal lokal segar</div></div>
-    <div class="menu-item"><div class="menu-name">Pisang Goreng Madu</div><div class="menu-price">Rp 6.000</div><div class="menu-sub">Pisang lokal pilihan</div></div>
-    <div class="menu-item"><div class="menu-name">Kue Semprong</div><div class="menu-price">Rp 5.000</div><div class="menu-sub">Kue tradisional desa</div></div>
-    <div class="menu-item"><div class="menu-name">Singkong Rebus</div><div class="menu-price">Rp 5.000</div><div class="menu-sub">+ kelapa parut</div></div>
+    <div class="mi"><div class="mi-name">Kopi Tubruk</div><div class="mi-price">Rp 8.000</div><div class="mi-sub">Robusta + gula aren</div></div>
+    <div class="mi"><div class="mi-name">Kopi Susu Gula Aren</div><div class="mi-price">Rp 12.000</div><div class="mi-sub">Espresso + susu</div></div>
+    <div class="mi"><div class="mi-name">Teh Kumis Kucing</div><div class="mi-price">Rp 7.000</div><div class="mi-sub">Herbal lokal segar</div></div>
+    <div class="mi"><div class="mi-name">Pisang Goreng Madu</div><div class="mi-price">Rp 6.000</div><div class="mi-sub">Pisang lokal pilihan</div></div>
+    <div class="mi"><div class="mi-name">Kue Semprong</div><div class="mi-price">Rp 5.000</div><div class="mi-sub">Kue tradisional</div></div>
+    <div class="mi"><div class="mi-name">Singkong Rebus</div><div class="mi-price">Rp 5.000</div><div class="mi-sub">+ kelapa parut</div></div>
   </div>
 </div>
-<div class="situ-sec">
-  <div class="sec-label">Destinasi Rute 3</div>
-  <div class="sec-heading">🎣 Situ Cibeureum</div>
-  <img class="situ-img" src="foto-desa.jpg" alt="Situ Cibeureum" onerror="this.style.background='#1b3d1c'">
-  <div class="sec-text">Danau alami Situ Cibeureum menawarkan wisata mancing yang menenangkan di tepi danau yang indah, dengan latar pegunungan Cianjur yang memukau.</div>
-  <div class="rakit-banner">
+
+<!-- SITU CIBEUREUM -->
+<div class="sec">
+  <div class="sec-eye">Destinasi Rute 3</div>
+  <div class="sec-h">🎣 Situ Cibeureum</div>
+  <img class="situ-img" src="zona-situ.jpg" alt="Situ Cibeureum" onerror="this.style.background='#1b3d1c'">
+  <div class="sec-p">Danau alami Situ Cibeureum menawarkan ketenangan dan keindahan yang memukau. Tersedia wisata mancing, saung tepi danau, dan rakit apung bambu eksklusif.</div>
+  <div class="rakit">
     <div class="rakit-icon">🛶</div>
-    <div><div class="rakit-t">Rakit Apung Situ Cibeureum</div><div class="rakit-d">Bersantai di atas rakit bambu sambil menikmati pemandangan danau & pegunungan Cidadap</div></div>
+    <div><div class="rakit-t">Rakit Apung Situ Cibeureum</div><div class="rakit-d">Bersantai di atas rakit bambu sambil menikmati refleksi pegunungan Cidadap di permukaan danau</div></div>
   </div>
 </div>
+
+<!-- INFO -->
 <div class="info-sec">
-  <div class="sec-label">Panduan Wisatawan</div>
-  <div class="sec-heading">Info Praktis</div>
+  <div class="sec-eye">Panduan Wisatawan</div>
+  <div class="sec-h">Info Praktis</div>
   <div class="info-grid">
-    <div class="info-card"><div class="info-card-title">💼 Yang Dibawa</div><ul class="info-list"><li>Sepatu anti-slip</li><li>Air minum 1L+</li><li>Topi & sunscreen</li><li>Jas hujan lipat</li><li>Kamera / HP</li><li>Uang tunai</li></ul></div>
-    <div class="info-card"><div class="info-card-title">📋 Syarat</div><ul class="info-list"><li>Usia min. 8 tahun</li><li>Kondisi fisik sehat</li><li>Maks 20 orang/grup</li><li>Wajib ikut briefing</li><li>Reservasi 3 hari sebelum</li></ul></div>
-    <div class="info-card"><div class="info-card-title">🚫 Dilarang</div><ul class="info-list"><li>Buang sampah sembarangan</li><li>Merusak tanaman</li><li>Tinggalkan rombongan</li><li>Petik tanaman sendiri</li><li>Bawa hewan peliharaan</li></ul></div>
-    <div class="info-card"><div class="info-card-title">💰 Harga</div><ul class="info-list"><li>Rute 1: Rp 25.000/org</li><li>Rute 2: Rp 35.000/org</li><li>Rute 3: Rp 50.000/org</li><li>Paket Grup diskon 15%</li><li>Sudah termasuk pemandu</li></ul></div>
+    <div class="icard"><div class="icard-t">💼 Yang Dibawa</div><ul class="ilist"><li>Sepatu anti-slip</li><li>Air minum 1L+</li><li>Topi & sunscreen</li><li>Jas hujan lipat</li><li>Kamera / HP</li><li>Uang tunai</li></ul></div>
+    <div class="icard"><div class="icard-t">📋 Syarat</div><ul class="ilist"><li>Usia min. 8 tahun</li><li>Kondisi fisik sehat</li><li>Maks 20 orang/grup</li><li>Wajib ikut briefing</li><li>Reservasi 3 hari sebelum</li></ul></div>
+    <div class="icard"><div class="icard-t">💰 Harga</div><ul class="ilist"><li>Rute 1: Rp 25.000/org</li><li>Rute 2: Rp 35.000/org</li><li>Rute 3: Rp 50.000/org</li><li>Paket Grup diskon 15%</li><li>Sudah termasuk pemandu</li></ul></div>
+    <div class="icard"><div class="icard-t">🚫 Dilarang</div><ul class="ilist"><li>Buang sampah sembarangan</li><li>Merusak tanaman</li><li>Tinggalkan rombongan</li><li>Petik tanaman sendiri</li><li>Bawa hewan peliharaan</li></ul></div>
   </div>
 </div>
-<div class="cta-sec">
-  <div class="cta-title">Siap Menjelajah?</div>
+
+<div class="cta">
+  <div class="cta-t">Siap Menjelajah?</div>
   <div class="cta-sub">Hubungi kami untuk reservasi dan informasi lebih lanjut.<br>Pemandu lokal siap menemani perjalanan Anda.</div>
   <a href="https://wa.me/6287874010019" class="cta-btn">📱 Hubungi via WhatsApp</a>
-  <div class="cta-contacts">
-    <span class="cta-c">📸 @pokdarwiscidadap</span>
-    <span class="cta-c">🌐 desawisatacidadap.github.io</span>
+  <div class="cta-c">
+    <span class="cta-ci">📸 @pokdarwiscidadap</span>
+    <span class="cta-ci">🌐 desawisatacidadap.github.io</span>
   </div>
 </div>
+
 <footer><p>© 2026 <strong style="color:#c9a96e;">Desa Wisata Cidadap</strong> · POKDARWIS Cidadap<br>Kec. Campaka, Kab. Cianjur, Jawa Barat<br><a href="index.html">Beranda</a> · <a href="https://wa.me/6287874010019">WhatsApp</a> · <a href="https://instagram.com/pokdarwiscidadap">Instagram</a></p></footer>
+
 </body>
 </html>
