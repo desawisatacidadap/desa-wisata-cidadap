@@ -62,7 +62,7 @@ body{font-family:'Poppins',sans-serif;background:#fff;color:var(--text);}
 
 /* ── WALKING TRAIL BANNER ── */
 .trail-banner{background:linear-gradient(135deg,var(--green),var(--green2));border-radius:14px;overflow:hidden;margin:0 0 16px;position:relative;}
-.trail-banner-img{width:100%;height:200px;object-fit:cover;opacity:0.5;}
+.trail-banner-img{width:100%;height:220px;object-fit:cover;opacity:0.5;object-position:center 40%;}
 .trail-banner-content{position:absolute;inset:0;padding:20px;display:flex;flex-direction:column;justify-content:space-between;}
 .trail-banner-tag{display:inline-block;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#fff;font-size:9px;font-weight:800;letter-spacing:2px;padding:4px 12px;border-radius:20px;width:fit-content;}
 .trail-banner-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#fff;line-height:1.2;margin:8px 0 4px;}
@@ -74,7 +74,7 @@ body{font-family:'Poppins',sans-serif;background:#fff;color:var(--text);}
 /* ── ZONA WISATA ── */
 .zona-cards{display:flex;flex-direction:column;gap:14px;margin-top:16px;}
 .zona-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.09);}
-.zona-img{width:100%;height:160px;object-fit:cover;}
+.zona-img{width:100%;height:200px;object-fit:cover;object-position:center center;}
 .zona-body{padding:15px;}
 .zona-badge{display:inline-block;padding:3px 11px;border-radius:4px;font-size:9.5px;font-weight:800;letter-spacing:1.5px;color:#fff;margin-bottom:7px;}
 .bg-green{background:var(--green2);}
@@ -100,8 +100,8 @@ body{font-family:'Poppins',sans-serif;background:#fff;color:var(--text);}
 
 /* ── EVENT ── */
 .event-cards{display:flex;flex-direction:column;gap:12px;margin-top:16px;}
-.event-card{background:#fff;border-radius:12px;overflow:hidden;display:flex;box-shadow:0 3px 16px rgba(0,0,0,0.09);}
-.event-img{width:100px;height:100px;object-fit:cover;flex-shrink:0;}
+.event-card{background:#fff;border-radius:12px;overflow:hidden;display:flex;box-shadow:0 3px 16px rgba(0,0,0,0.09);min-height:110px;}
+.event-img{width:110px;height:110px;object-fit:cover;flex-shrink:0;border-radius:0;}
 .event-body{padding:13px;flex:1;}
 .event-badge{font-size:9px;font-weight:800;color:var(--gold2);letter-spacing:1px;text-transform:uppercase;}
 .event-name{font-size:13.5px;font-weight:700;color:var(--green);margin:3px 0;}
@@ -171,7 +171,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
 
 <!-- HERO -->
 <div class="hero">
-  <img class="hero-img" src="foto-desa.jpg" alt="Desa Wisata Cidadap" onerror="this.style.background='#1b3d1c'">
+  <img class="hero-img" src="hero.jpg" alt="Desa Wisata Cidadap" onerror="this.style.background='#1b3d1c'">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-tag">✦ Selamat Datang ✦</div>
@@ -204,7 +204,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
   <div class="sec-eyebrow">Program Unggulan</div>
   <div class="sec-title">🥾 Walking Trail</div>
   <div class="trail-banner">
-    <img class="trail-banner-img" src="hero.jpg" alt="Walking Trail" onerror="this.style.background='#1b3d1c'">
+    <img class="trail-banner-img" src="hero.jpg" alt="Walking Trail" style="object-position:center 30%;" onerror="this.style.background='#1b3d1c'">
     <div class="trail-banner-content">
       <div class="trail-banner-tag">✦ Program Baru 2026 ✦</div>
       <div>
@@ -228,7 +228,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
   <div class="sec-title">Empat Zona Unggulan</div>
   <div class="zona-cards">
     <div class="zona-card">
-      <img class="zona-img" src="zona-situ.jpg" alt="Situ Cibeureum" onerror="this.style.background='#1b3d1c'">
+      <img class="zona-img" src="zona-situ.jpg" alt="Situ Cibeureum" style="object-position:center 40%;" onerror="this.style.background='#1b3d1c'">
       <div class="zona-body">
         <div class="zona-badge bg-green">Zona Air</div>
         <div class="zona-name">🎣 Situ Cibeureum</div>
@@ -236,7 +236,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
       </div>
     </div>
     <div class="zona-card">
-      <img class="zona-img" src="zona-curug.jpg" alt="Curug Badak" onerror="this.style.background='#2c5f2d'">
+      <img class="zona-img" src="zona-curug.jpg" alt="Curug Badak" style="object-position:center 40%;" onerror="this.style.background='#2c5f2d'">
       <div class="zona-body">
         <div class="zona-badge bg-green">Zona Air</div>
         <div class="zona-name">💧 Curug Badak</div>
@@ -244,7 +244,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
       </div>
     </div>
     <div class="zona-card">
-      <img class="zona-img" src="zona-kopi.jpg" alt="Agrowisata" onerror="this.style.background='#4a2c0a'">
+      <img class="zona-img" src="zona-kopi.jpg" alt="Agrowisata" style="object-position:center 30%;" onerror="this.style.background='#4a2c0a'">
       <div class="zona-body">
         <div class="zona-badge bg-coffee">Zona Agro</div>
         <div class="zona-name">☕ Kebun Kopi & Agrowisata</div>
@@ -252,7 +252,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
       </div>
     </div>
     <div class="zona-card">
-      <img class="zona-img" src="zona-bukit.jpg" alt="Outbound" onerror="this.style.background='#7c5232'">
+      <img class="zona-img" src="zona-bukit.jpg" alt="Outbound" style="object-position:center 30%;" onerror="this.style.background='#7c5232'">
       <div class="zona-body">
         <div class="zona-badge bg-earth">Zona Budaya</div>
         <div class="zona-name">🏡 Perbukitan & Outbound</div>
@@ -269,7 +269,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
   <div class="paket-cards">
     <div class="paket-card">
       <div class="paket-name">🌾 Paket Walking Trail Dasar</div>
-      <div class="paket-price">Rp 25.000<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
+      <div class="paket-price">Rp 37.500<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
       <ul class="paket-includes">
         <li>Trekking Rute 1 (Sawah & Jembatan)</li>
         <li>Pemandu lokal bersertifikat</li>
@@ -279,7 +279,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
     </div>
     <div class="paket-card coffee">
       <div class="paket-name">☕ Paket Trail + Coffee Deck</div>
-      <div class="paket-price" style="color:#7b4f2e">Rp 35.000<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
+      <div class="paket-price" style="color:#7b4f2e">Rp 52.500<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
       <ul class="paket-includes">
         <li>Trekking Rute 2 (Hutan & Kebun Kopi)</li>
         <li>1 gelas kopi/teh pilihan di Coffee Deck</li>
@@ -290,9 +290,10 @@ footer{background:#111;padding:24px 20px;text-align:center;}
     </div>
     <div class="paket-card premium">
       <div class="paket-name">⛰️ Paket Full Experience</div>
-      <div class="paket-price" style="color:var(--gold2)">Rp 75.000<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
+      <div class="paket-price" style="color:var(--gold2)">Rp 112.500<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
       <ul class="paket-includes">
         <li>Trekking Rute 3 (Perbukitan penuh)</li>
+        <li>Tongkat jalan (termasuk paket)</li>
         <li>Coffee Deck + makan siang desa</li>
         <li>Wisata Situ Cibeureum</li>
         <li>Naik rakit apung</li>
@@ -301,7 +302,7 @@ footer{background:#111;padding:24px 20px;text-align:center;}
     </div>
     <div class="paket-card">
       <div class="paket-name">🎣 Paket Mancing Situ Cibeureum</div>
-      <div class="paket-price">Rp 50.000<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
+      <div class="paket-price">Rp 75.000<span style="font-size:12px;font-weight:400;color:var(--soft)">/orang</span></div>
       <ul class="paket-includes">
         <li>Akses area mancing 4 jam</li>
         <li>Peralatan mancing</li>
